@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_Us_Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            padding-top: 50px;
+        }
+
+
+        .navbar-nav .nav-link {
+            color: black;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #6f42c1;
+        }
+
+        .navbar-nav .dropdown-menu {
+            border-radius: 0;
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        @media (max-width:300px) {
+            .navbar-brand img {
+                height: 60px;
+            }
+        }
+
+        @media (max-width:400px) {
+            .navbar-brand img {
+                height: 60px;
+            }
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width:576px) {
+
+            .about-image {
+                max-width: 100%;
+                height: 250px;
+                /* object-fit: contain; */
+                display: block;
+            }
+
+        }
+
+        @media (max-width:400px) {
+            .about-image {
+                max-width: 100%;
+                height: 230px;
+                /* object-fit: contain; */
+                display: block;
+            }
+        }
+
+        @media (max-width:300px) {
+            .about-image {
+                max-width: 100%;
+                height: 200px;
+                /* object-fit: contain; */
+                display: block;
+            }
+        }
+
+        @media (max-width:230px) {
+            .about-image {
+                max-width: 100%;
+                height: 100px;
+                /* object-fit: contain; */
+                display: block;
+            }
+        }
+
+        .contact-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .contact-box {
+            background-color: rgba(128, 128, 128, 0.221);
+            padding: 30px;
+            border-radius: 6px;
+            height: 100%;
+        }
+
+        .contact-box h5 {
+            font-weight: bold;
+        }
+
+        .contact-box i {
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        .btn-submit {
+            background-color: #6c6464;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #4f4a4a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-heading {
+                font-size: 2rem;
+            }
+        }
+
+        .map_location {
+            margin-top: 50px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer a:hover {
+            color: #6f42c1;
+        }
+
+        .footer h5 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer hr {
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+            opacity: 1;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width:576px) {
+            .footer hr {
+                width: 40px;
+                height: 2px;
+                background-color: #fff;
+                opacity: 1;
+                margin: 0 auto 15px auto;
+                /* Centers the line horizontally */
+            }
+        }
+
+        .footer p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer .social-icons a {
+            background: #555;
+            color: #fff;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .footer .logo {
+            background-color: white;
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 576px) {
+            .footer {
+                text-align: center;
+            }
+
+            .footer .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="Home_Page.html">
+                <img src="https://chiripalgroup.com/img/chiripal-logo.png" alt="CHIRIPAL Logo">
+            </a>
+
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-0 me-sm-0 me-md-4 me-lg-4">
+                        <a class="nav-link" href="Home_Page.html">Home</a>
+                    </li>
+                    <li class="nav-item me-0 me-sm-0 me-md-4 me-lg-4">
+                        <a class="nav-link" href="About_Us_Page.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item  me-0 me-sm-0 me-md-4 me-lg-4">
+                        <a class="nav-link" href="CSR_page.html" target="_blank">CSR</a>
+                    </li>
+
+                    <li class="nav-item me-0 me-sm-0 me-md-4 me-lg-4">
+                        <a class="nav-link" href="Blogs.html" target="_blank">Blogs</a>
+                    </li>
+                    <li class="nav-item me-0 me-sm-0 me-md-4 me-lg-4">
+                        <a class="nav-link" href="Contact_Us_Page.html" target="_blank">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="pt-5">
+        <img src="https://chiripalgroup.com/img/contact.jpg" alt="Chiripal Innetiatives" class="about-image">
+    </section>
+
+    <div class="container">
+        <h2 class="contact-heading">Contact Us</h2>
+        <div class="row g-4">
+            <!-- Left Contact Info -->
+            <div class="col-lg-6">
+                <div class="contact-box">
+                    <h5><i class="bi bi-geo-alt-fill"></i> Chiripal Group of Companies:</h5>
+                    <p>Chiripal House, Shivranjani Cross Road, 132 Feet Ring Rd, Satellite, Ahmedabad,<br> Gujarat
+                        380015</p>
+
+                    <h5 class="mt-4"><i class="bi bi-telephone-fill"></i> Phone:</h5>
+                    <p>(+79) 6966 0000</p>
+
+                    <h5 class="mt-4"><i class="bi bi-envelope-fill"></i> Write Us:</h5>
+                    <p>corporate@chiripalgroup.com</p>
+                </div>
+            </div>
+
+            <!-- Right Contact Form -->
+            <div class="col-lg-6">
+                <div class="contact-box">
+                    <form>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="3"
+                            placeholder="Type your message..."></textarea>
+
+                        <button type="submit" class="btn btn-submit mt-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid map_location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.0009046757564!2d72.530744!3d23.023739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84cf0a8203a1%3A0x136a9d45ea7a1e70!2sChiripal%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1744163406495!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 mt-sm-5 mt-md-5 mt-lg-5">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- About -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="Home_Page.html"><img src="https://chiripalgroup.com/img/chiripal-logo.png"
+                            alt="Chiripal Logo" class="logo"></a>
+                    <p>
+                        Chiripal Group is India’s leading business conglomerate, committed to putting the nation on a
+                        global pedestal with its value-driven philosophy.
+                    </p>
+                </div>
+
+                <!-- Group Companies -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>GROUP COMPANIES</h5>
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Textiles</a></li>
+                        <li><a href="#">Packaging</a></li>
+                        <li><a href="#">Chiripal Renewables</a></li>
+                        <li><a href="#">Chemicals</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>USEFUL LINKS</h5>
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li><a href="Home_Page.html" target="_blank">Home</a></li>
+                        <li><a href="About_Us_Page.html" target="_blank">About us</a></li>
+                        <li><a href="CSR_page.html">Csr</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Life at Chiripal</a></li>
+                        <li><a href="#">Current Opening</a></li>
+                        <li><a href="Blogs.html" target="_blank">Blogs</a></li>
+                        <li><a href="Blogs.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>CONTACT US</h5>
+                    <hr>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <strong>Chiripal House,</strong><br>
+                        Shivranjani Cross Road, Satellite,<br>
+                        Ahmedabad – 380 015. Gujarat
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-2"></i>
+                        (+79) 6966 0000
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        corporate@chiripalgroup.com
+                    </p>
+                    <div class="d-flex social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
